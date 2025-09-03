@@ -1,0 +1,20 @@
+{% if lang_siteurls %}
+<div class="language-switcher">
+  <span class="language-label">{{ _("Language") }}:</span>
+  <ul class="language-list">
+    {% for lang, url in lang_siteurls.items() %}
+      <li class="language-item{% if lang == DEFAULT_LANG %} active{% endif %}">
+        <a href="{{ url }}/{{ relpath_to_site(DEFAULT_LANG, lang) }}" class="language-link">
+          {% if lang == 'zh' %}
+            中文
+          {% elif lang == 'en' %}
+            English
+          {% else %}
+            {{ lang }}
+          {% endif %}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

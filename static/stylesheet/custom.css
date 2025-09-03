@@ -1,0 +1,65 @@
+/* 语言切换菜单样式 */
+.language-switcher {
+  display: inline-block;
+  margin-left: 15px;
+  position: relative;
+}
+
+.language-label {
+  font-size: 14px;
+  color: #666;
+  margin-right: 5px;
+}
+
+.language-list {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.language-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.language-item:last-child {
+  margin-right: 0;
+}
+
+.language-link {
+  color: #4183C4;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.language-item.active .language-link {
+  font-weight: bold;
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+.language-link:hover {
+  text-decoration: underline;
+  background-color: #f8f8f8;
+}
+
+/* 暗色主题适配 */
+.dark-theme .language-label {
+  color: #aaa;
+}
+
+.dark-theme .language-link {
+  color: #6ba4e0;
+}
+
+.dark-theme .language-item.active .language-link {
+  color: #fff;
+  background-color: #444;
+}
+
+.dark-theme .language-link:hover {
+  background-color: #333;
+}
