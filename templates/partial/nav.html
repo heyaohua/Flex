@@ -6,6 +6,10 @@
   <a href="{{ link }}">{{ _(title) }}</a>
   {% endfor %}
 
+  {% if PLUGINS and ('tipue_search' in PLUGINS or 'pelican.plugins.tipue_search' in PLUGINS) %}
+  <a href="{{ SITEURL }}/search.html">{{ _("Search") }}</a>
+  {% endif %}
+
   {% if FEED_ALL_ATOM %}
   <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">{{ _("Atom") }}</a>
   {% endif %}
